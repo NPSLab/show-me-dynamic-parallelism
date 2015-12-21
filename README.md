@@ -32,5 +32,6 @@ Related publication
 If you find this benchmark useful in your work, please acknowledge Show-Me-Dynamic-Parallism (Show-Me-DP) and cite the following publication:
 
 * **[Compiler-Assisted Workload Consolidation for Efficient Dynamic Parallelism on GPU](http://www.danielbit.com)**
-Hancheng Wu, Da Li, Michela Becchi
-IEEE 30th International Symposium on Parallel & Distributed Processing (IPDPS) 2016
+
+Hancheng Wu, Da Li, Michela Becchi  
+IEEE 30th International Symposium on Parallel & Distributed Processing (IPDPS) 2016  
