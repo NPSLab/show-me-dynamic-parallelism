@@ -1,0 +1,24 @@
+# ignored directories
+#bin/
+#log/
+
+# ignored data/results
+*.rst
+*.send
+*.recv
+*.dot
+*.jpeg
+*.txt
+*.gr
+*.log
+*.dist
+*.out
+*.swp
+
+# binaries
+gpu-*
+*.o
+
+# project file
+*.cproject
+*.project
