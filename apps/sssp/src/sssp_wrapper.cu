@@ -255,17 +255,17 @@ void sssp_np_consolidate_gpu()
 		}
 
 		switch (config.solution) {
-		case 1:
+		case 2:
 			consolidate_warp_dp_kernel<<<dimGridT, dimBlockT>>>(d_vertexArray, d_edgeArray, d_costArray,
 																d_weightArray, d_update, noNodeTotal,
 																d_work_queue, d_queue_length, d_buffer);
 			break;
-		case 2:
+		case 3:
 			consolidate_block_dp_kernel<<<dimGridT, dimBlockT>>>(d_vertexArray, d_edgeArray, d_costArray,
 																d_weightArray, d_update, noNodeTotal,
 																d_work_queue, d_queue_length, d_buffer);
 			break;
-		case 3:
+		case 4:
 			cudaCheckError( __LINE__, cudaMemset(d_bSize, 0, sizeof(unsigned int)));
 			cudaCheckError( __LINE__, cudaMemset(d_count, 0, sizeof(unsigned int)));
 			//int *test_buffer;

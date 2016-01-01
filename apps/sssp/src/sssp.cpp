@@ -29,7 +29,7 @@ void usage() {
     fprintf(stderr, "                 1 - DIMACS10\n");
     fprintf(stderr, "                 2 - SLNDC\n");
     fprintf(stderr, "    --solution,-s <number>             specify the solution\n");
-    fprintf(stderr, "                 0 - no dynamic parallelim (unordered + thread queue)\n");
+    fprintf(stderr, "                 0 - no dynamic parallelism (unordered + thread queue)\n");
     fprintf(stderr, "                 1 - naive dynamic parallelism baseline (per thread launch)\n");
     fprintf(stderr, "                 2 - warp-level consolidation\n");
     fprintf(stderr, "                 3 - block-level consolidation\n");
