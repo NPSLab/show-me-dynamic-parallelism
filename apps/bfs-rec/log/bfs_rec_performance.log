@@ -1,0 +1,30 @@
+
+===MAIN=== :: [num_nodes,num_edges] = 7115, 103689
+CUDA runtime initialization:		0.007634s
+CUDA cudaMalloc:		0.260735ms
+CUDA H2D cudaMemcpy:		0.340001ms
+CUDA kernel execution:		1.609715ms
+CUDA D2H cudaMemcpy:		0.032258ms
+
+===MAIN=== :: [num_nodes,num_edges] = 7115, 103689
+CUDA runtime initialization:		0.007184s
+CUDA cudaMalloc:		0.256840ms
+CUDA H2D cudaMemcpy:		0.248734ms
+CUDA kernel execution:		11.222394ms
+CUDA D2H cudaMemcpy:		0.030319ms
+
+===MAIN=== :: [num_nodes,num_edges] = 7115, 103689
+CUDA runtime initialization:		0.007170s
+CUDA cudaMalloc:		0.258160ms
+CUDA H2D cudaMemcpy:		0.249561ms
+CUDA kernel execution:		13.953574ms
+CUDA D2H cudaMemcpy:		0.031050ms
+
+===MAIN=== :: [num_nodes,num_edges] = 7115, 103689
+CUDA runtime initialization:		0.007191s
+CUDA cudaMalloc:		0.256824ms
+CUDA H2D cudaMemcpy:		0.248718ms
+CUDA kernel execution:		1.083946ms
+CUDA D2H cudaMemcpy:		0.033514ms
+Tail node: 3466
+Head node: 15931
