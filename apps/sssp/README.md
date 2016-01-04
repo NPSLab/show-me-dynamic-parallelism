@@ -1,5 +1,6 @@
 Usage
 =====
+~~~~
 Usage: gpu-sssp [option]
 
 Options:  
@@ -22,6 +23,7 @@ Other:
                  4 - multiple dynamic parallelism per block  
                  5 - single dynamic parallelism per block  
     --device,-e <number>               select the device
+~~~~
 
 Datasets
 ========
