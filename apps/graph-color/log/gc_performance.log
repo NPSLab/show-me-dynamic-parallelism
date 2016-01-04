@@ -1,0 +1,12 @@
+
+CONFIGURATION:
+- Graph file: ../../../datasets/DIMACS10/coPapersCiteseer.graph
+- Graph format: 1
+- Solution: 6
+Threshold: 64
+Threshold: 64
+Threshold: 64
+Threshold: 64
+Threshold: 64
+Threshold: 64
+Threshold: 64
