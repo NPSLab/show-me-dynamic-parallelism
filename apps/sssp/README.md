@@ -16,49 +16,44 @@ Other:
                  1 - DIMACS10  
                  2 - SLNDC  
     --solution,-s <number>             specify the solution  
-                 0 - Unordered + thread queue  
-                 1 - dual queue  
-                 2 - shared delayed buffer  
-                 3 - global dedayed buffer  
-                 4 - multiple dynamic parallelism per block  
-                 5 - single dynamic parallelism per block  
+                 0 - no dynamic parallelism (unordered + thread queue)
+                 1 - naive dynamic parallelism baseline (per thread launch)
+                 2 - warp-level consolidation
+                 3 - block-level consolidation
+                 4 - grid-level consolidation;
     --device,-e <number>               select the device
 ~~~~
 
 Datasets
 ========
-See DIMACS9, DIMACS10 and SLNDC graphs in ./datasets folder
+See [DIMACS9](http://www.dis.uniroma1.it/challenge9/), [DIMACS10] (http://www.cc.gatech.edu/dimacs10/) and [SLNDC](https://snap.stanford.edu/data/) graphs in `datasets` folder
 
 Source Files
 ============
-
-GPU
----
-* sssp.cpp - entry point, include main function and other utility functions like printing help information, parsing arguments, initializing configuration and printing configuration. The main function deals with reading data and internal format conversion.
-* sssp.h - definition of configuration and other global variables
-* sssp_wrapper.cu - implementation of preparation, clean and wrapper function  
+GPU Code
+--------
+* `sssp.cpp` - entry point, include main function and other utility functions like printing help information, parsing arguments, initializing configuration and printing configuration. The main function deals with reading data and internal format conversion.
+* `sssp.h` - definition of configuration and other global variables
+* `sssp_wrapper.cu` - implementation of preparation, clean and wrapper function  
   * preparation: GPU memory allocation, data transfer, kernel configuration initialization
   * clean: GPU memory deallocation
   * wrapper: code on CPU that perform as interface between CPU and GPU. It is the wrapper of kernel launches 
-* sssp_kernel.cu - implementation of SSSP kernels on CPU  
+* `sssp_kernel.cu` - implementation of SSSP kernels on CPU  
   The following implementations are provided:
-  1. unordered + thread queue  
-  2. dual queue  
-  3. shared delayed buffer  
-  4. global dedayed buffer  
-  5. multiple dynamic parallelism per block (less efficient)
-  6. single dynamic parallelism per block (efficient)
-  7. workload consolidation for dynamic parallelism
+  1. no dynamic parallelism (unordered + thread queue)
+  2. naive dynamic parallelism baseline (per thread launch)
+  3. warp-level consolidation
+  4. block-level consolidation
+  5. grid-level consolidation;
   
   Note: for large graphs, it is necessary to change the OS setting for the stack size:
-  * bash command: ulimit -s unlimited
-  * csh command: set stacksize unlimited
+  * bash command: `ulimit -s unlimited`
+  * csh command: `set stacksize unlimited`
 
 Precompiler Variables  
 ---------------------
-- PROFILE_GPU  
-- CONSOLIDATE_LEVEL  
+- `PROFILE_GPU`  
 
 Notes
 ==============
-- By default, the performance is measured under **10** runs and average numbers are reported. To reduce profiling time with NV Profiler, change to single run (macro **N** in "sssp.h")
+- By default, the performance is measured under **10** runs and average numbers are reported. To reduce profiling time with NV Profiler, change to single run (macro `N` in `sssp.h`)
