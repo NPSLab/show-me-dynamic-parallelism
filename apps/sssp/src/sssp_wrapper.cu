@@ -281,6 +281,7 @@ void sssp_np_consolidate_gpu()
 																d_work_queue, d_queue_length, d_buffer,
 																d_bSize, d_count);
 			*/
+			break;
 		default:
 			printf("Unsupported solutions");
 			exit(0);
