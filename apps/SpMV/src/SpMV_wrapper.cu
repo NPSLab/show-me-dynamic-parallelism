@@ -2,8 +2,6 @@
 #include <cuda.h>
 #include "SpMV.h"
 
-#include "halloc.h"
-
 #define QMAXLENGTH 10240000
 #define GM_BUFF_SIZE 10240000
 

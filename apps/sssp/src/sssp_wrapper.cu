@@ -2,8 +2,6 @@
 #include <cuda.h>
 #include "sssp.h"
 
-#include "halloc.h"
-
 #define INF 1073741824	// 1024*1024*1024
 #define QMAXLENGTH 10240000
 #define GM_BUFF_SIZE 10240000
