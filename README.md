@@ -1,4 +1,4 @@
-Show-Me-Dynamic-Parallelim
+Show-Me-Dynamic-Parallelism
 ==========================
 This benchmark includes several impelentations using CUDA Dynamic Parallelism.
 
