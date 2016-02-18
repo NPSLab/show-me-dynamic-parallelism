@@ -9,7 +9,7 @@
 #define NESTED_BLOCK_SIZE 64
 #define MAX_STREAM_NUM 4
 
-#define GPU_PROFILE
+//#define GPU_PROFILE
 
 #ifdef GPU_PROFILE
 __device__ unsigned nested_calls = 0;

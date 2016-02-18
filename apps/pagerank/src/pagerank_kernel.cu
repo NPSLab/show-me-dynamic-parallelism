@@ -18,7 +18,7 @@
 __device__ unsigned nested_calls = 0;
 
 __global__ void gpu_statistics(unsigned solution) {
-	printf("====>GPU #%u -number of kernel calls:%u\n", solution, nested_calls);
+	printf("====>GPU #%u - number of kernel calls:%u\n", solution, nested_calls);
 }
 
 __global__ void reset_gpu_statistics() {
